@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="favicon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" href="favicon.png">
+    <title>Github</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="section">
+        <div class="inner">
+
+            <div class="menu-group float--left">
+                <div class="logo">
+                    <a href="#">GitHubicon</a>
+                </div>
+                <ul class="main-menu">
+                    <li><a href="#" id="why-github-toggle">Why Github?<span class="toggle-icon"></span></a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Enterprise</a></li>
+                    <li><a href="#" id="explore-toggle">Explore<span class="toggle-icon"></span></a></li>
+                    <li><a href="#">Marketplace</a></li>
+                    <li><a href="#" id="pricing-toggle">Pricing<span class="toggle-icon"></span></a></li>
+                </ul>
+            </div>
+
+            <div class="sign-group float--right">
+                <form id="search-form" method="POST" action="">
+                    <input type="text" id="search" class="input--text" placeholder="Search GitHub">
+                    <input type="submit" value="GO">
+                </form>
+                <div class="btn-group float--right">
+                    <a href="#" class="btn sign-in">Sign in</a>
+                    <a href="#" class="btn btn--primary sign-up">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section section--visual">
+        <div class="inner">
+
+            <div id="intro">
+                <h2 style="color: white;">Built&nbsp;for<br> developers</h2><br><br>
+                <p style="color: dimgray; font-size: 35px;">
+                    Github is a development platform inspired by the way you work. From <font color="white">open source</font> to <font color="white">business</font>, you can host and review code, manage projects, and build software alongside 50 million developers
+                </p>
+            </div>
+
+            <div id="signup-box">
+                <form id="sign-form"  action="POST">
+                    <ul>
+                        <p style="color: #31373d; font-weight: bold;">Username</p>
+                        <br>
+                        <li><input type="text" class="input--text" placeholder="Pick a username"></li><br><br>
+                        <p style="color: #31373d; font-weight: bold;">Email</p><br>
+                        <li><input type="email" class="input--text" placeholder="Your email address"></li><br><br>
+                        <p style="color: #31373d; font-weight: bold;">Password</p><br>
+                        <li>
+                            <input type="password" class="input--text" placeholder="Create a password">
+                            <p class="caption">Make sure it's at least 15 characters OR at least 8 characters including a number and a lowercase letter.<a href="#" style="color: cornflowerblue;">&nbsp;Learn more.</a></p>
+                        </li>
+                        <li>
+                            <button type="submit" class="btn btn--primary">Sign up for GitHub</button><br><br><br>
+                            <p class="caption">By clicking "Sign up for GitHub", you agree to our <a href="#" style="color: cornflowerblue;">Terms of Service</a> and <a href="#" style="color: cornflowerblue;">Privacy Statement</a>. We'll occasionally send you account related emails.</p>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+<footer>
+    <img src="footer.png" alt="푸터 이미지" style="width:600px; height:auto; float:right;">
+</footer>
+</html>

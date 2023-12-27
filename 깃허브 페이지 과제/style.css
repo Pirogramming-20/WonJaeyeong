@@ -1,0 +1,227 @@
+.toggle-icon {
+  display: inline-block;
+  margin-left: 5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid white; 
+  content: "";
+  transition: transform 0.3s ease; 
+}
+
+.toggle-icon.active {
+  transform: rotate(180deg);
+}
+
+.body__container{ 
+  font-family: 'Roboto', sans-serif;
+  font-size : 16px;
+  font-weight : 400;
+  color : #333;
+}
+
+.btn{
+  height: 34px;
+  background : #eee linear-gradient(to bottom,#fcfcfc,#eee);
+  border : 1px solid #d5d5d5;
+  border-radius : 4px;
+  display: inline-flex;
+  align-items : center;
+  padding : 0 12px;
+  font-size : 14px;
+  font-weight: 500;
+  line-height : 1.5;
+  cursor : pointer;
+  box-sizing : border-box;
+  position : relative;
+}
+
+.btn:hover::before{
+  content:"";
+  position : absolute; 
+  top : 0;
+  left : 0;
+  width : 100%;
+  height : 100%;
+  background : rgba(0,0,0,0.07);
+}
+.btn--primary{
+  border : 1px solid green;
+  color : #fff;
+  background : green;
+}
+
+.input--text{
+  height : 34px;
+  padding : 0 10px;
+  border: 1px solid #ddd;
+  border-radius : 5px;
+  box-sizing : border-box;
+  outline : none; 
+  box-shadow : inset 0 1px 2px rgba(0,0,0,0.075); 
+  font-size : 16px;
+}
+.input--text:focus{
+  border-color : #51a7e8;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075),
+                    0 0 5px rgba(81,167,232,0.5); 
+}
+.input--text::-webkit-input-placeholder{color : #cacaca;}
+.input--text::-ms-input-placeholder{color : #cacaca;}
+.input--text::-moz-input-placeholder{color : #cacaca;}
+
+header {
+  background-color: #162b2c;
+}
+header .inner {
+  max-width: 980px;
+  height: 78px;
+  margin: 0 auto;
+}
+
+header .menu-group {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+header .logo{
+  margin-right : 10px;
+}
+header .logo a{
+  background : url("./favicon.ico");
+  width : 32px;
+  height : 32px;
+  display : block;
+  text-indent : -9999px;
+}
+header .main-menu{
+  display : flex;
+}
+header .main-menu li a{
+  display : block;
+  padding : 10px; 
+  color : white;
+}
+a {
+  text-decoration: none;
+}
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.float--left {
+  float:left;
+}
+
+.float--right{
+  float: right;
+}
+
+header .sign-group{
+  display : flex;
+  height : 100%;
+  align-items: center;
+}
+
+header .btn-group{
+order : 2;   
+display : flex; 
+}
+header .btn-group .sign-in{
+margin-right : 4px;
+}
+
+
+#search-form{
+order : 1;
+margin-right : 12px;
+}
+
+#search{
+  width : 160px;
+  font-size : 14px;
+}
+
+
+header .sub-menu{
+display : flex;
+margin-right : 10px;
+}
+header .sub-menu li a{
+padding : 8px;
+display : block;
+font-size : 13px;
+color : #3c4146;
+}
+header .sub-menu li a:hover{
+color : #4078c0;
+}
+
+  .section--visual{
+    background-color: #162b2c;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+}
+.section--visual::before{ 
+    position : absolute;  
+    top : 0; 
+    left : 0;
+    bottom : 0; 
+    right : 0;
+    background : rgba(0,0,0,.3);
+}
+.section--visual .inner{
+    padding : 160px 0;
+    display : flex;
+}
+
+
+#sign-form{
+    width : 340px; 
+    margin-top : 16px;
+}
+#sign-form li{
+    margin-bottom: 17px;
+}
+#sign-form .input--text{
+    width : 100%; 
+    height : 40px;
+}
+
+#sign-form li:last-child{
+    margin-bottom: 0px;
+}
+
+#sign-form .caption{
+    font-size : 12px;
+    margin-top: 5px;
+    color : black;
+    line-height: 1.5;
+    text-align: center;
+}
+#sign-form [type="submit"]{
+    width : 100%;
+    height: 62px;
+    font-size : 20px;    
+    justify-content:center;
+}
+#signup-box {
+  background-color: white;
+  padding: 50px 60px;
+  border-radius: 20px;
+  margin-left: 50px;
+}
+#intro {
+  background-color: transparent;
+  padding: 150px 160px;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+#intro h2 {
+  font-size: 70px; 
+  color: white; 
+  font-weight: 1000;
+}
