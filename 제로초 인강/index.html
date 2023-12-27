@@ -605,14 +605,20 @@
                     color: rgba(8, 8, 8, .5);
                     display: flex;
                     justify-content: flex-start;
+                    line-height: 23px;
+                    margin-bottom: 17px;
                 }
                 #main-newstand header .bold {
                     font-weight: bold;
                     color: black;
                 }
-                #main-newstand gray {
+                #main-newstand-gray {
                     display: flex;
                     justify-content: flex-start;
+                    height: 50px;
+                    padding: 12px 20px;
+                    background-color: var(--color_option_bg);
+                    border-radius: 4px;
                 }
                 #main-newstand a {
                     text-decoration: none;
@@ -622,6 +628,27 @@
                 }
                 #main-newstand a:hover {
                     text-decoration: underline;
+                }
+                #main-newstand-grid {
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    height: 224px;
+                    grid-gap: 1px;
+                    background-color: var(--color_border_in);
+                    grid-template-rows: repeat(4, 1fr);
+                    width: 790px;
+                    grid-template-columns: repeat(6, 1fr);
+                    border: 1px solid var(--color_border_in);
+                    border-radius: 4px;
+                    margin-top: 18px;
+                }
+                #main-newstand-grid > div {
+                    height: 100%;
+                    background-color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
                 #main-newstand footer {
                     border-top: 1px solid var(--color_border_in);
@@ -644,8 +671,7 @@
                                 <div>
                                     <a href="#">전체언론사</a>
                                 <a href="#">연합뉴스</a>                           
-                                <a href="#">野 '대장동 내전' 재현…'이낙연측 제보' 확인되자 친명계 격앙
-                                    '한동훈發 칼바람' 관측에 與 수도권·영남 의원 엇갈린 기류</a>
+                                <a href="#">러 "한국, 수출제한 대응에 놀라지 말길"…보복조치 경고</a>
                                 </div>
                                 <div>
                                     <a href="#">뉴스스탠드</a>
@@ -658,8 +684,7 @@
                                 <div>언론사</div>
                                 <div>언론사</div>
                                 <div>언론사</div>
-                                <div>언론사</div>
-                                <div>언론사</div>
+                                <div>언론사</div>                                
                                 <div>언론사</div>
                                 <div>언론사</div>
                                 <div>언론사</div>
