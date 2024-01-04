@@ -21,6 +21,7 @@ while num <= 31:
   num += userA_num_input
 
   if num >= 31:
+    print('playerB win!')
     break
 
   while True:
@@ -43,4 +44,5 @@ while num <= 31:
   num += userB_num_input
 
   if num >= 31:
+    print('playerA win!')
     break
