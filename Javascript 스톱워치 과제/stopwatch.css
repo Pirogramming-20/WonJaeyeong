@@ -1,0 +1,108 @@
+:root {
+  --color-background-green: #88ab8e;
+  --color-button-green: #d2e3c8;
+}
+
+/* 기본 폰트 */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
+  font-weight: 500;
+  ft-style: normal;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.watch {
+  background-color: var(--color-background-green);
+  border-radius: 30px;
+}
+.timer {
+  border-radius: 30px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin-left: 75px;
+}
+#timer-container {
+  width: 500px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#stopwatch {
+  text-align: center;
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.record-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.box-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #88ab8e;
+  width: 100%;
+  height: 40px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.button-container {
+  gap: 50px;
+}
+
+#startbutton {
+  cursor: pointer;
+  background-color: var(--color-button-green);
+  border-radius: 15px;
+  width: 40px;
+  height: 40px;
+}
+
+#stopbutton {
+  cursor: pointer;
+  background-color: var(--color-button-green);
+  border-radius: 15px;
+  width: 40px;
+  height: 40px;
+}
+
+#resetbutton {
+  cursor: pointer;
+  background-color: var(--color-button-green);
+  border-radius: 15px;
+  width: 40px;
+  height: 40px;
+}
+
+.trashBtn:hover {
+  cursor: pointer;
+  color: red;
+}
