@@ -1,6 +1,7 @@
 :root {
-  --color-background-green: #88ab8e;
+  --color-stopwatch-green: #88ab8e;
   --color-button-green: #d2e3c8;
+  --color-background: white;
 }
 
 /* 기본 폰트 */
@@ -24,12 +25,12 @@ body {
   align-items: center;
 }
 .watch {
-  background-color: var(--color-background-green);
+  background-color: var(--color-stopwatch-green);
   border-radius: 30px;
 }
 .timer {
   border-radius: 30px;
-  background-color: white;
+  background-color: var(--color-background);
   justify-content: center;
   align-items: center;
   width: 70%;
@@ -68,7 +69,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #88ab8e;
+  background-color: var(--color-stopwatch-green);
   width: 100%;
   height: 40px;
   border-top-left-radius: 20px;
@@ -116,7 +117,7 @@ body {
   list-style: none;
   width: 100%;
   font-size: 1em;
-  background-color: white;
+  background-color: var(--color-background);
   padding: 5px;
   margin-bottom: 5px;
   align-items: center;
