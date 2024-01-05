@@ -109,8 +109,8 @@ function clearList() {
 }
 
 function allcheckList() {
-  let allCheckIcon = document.querySelector('.allcheckBtn i'); // allcheckBtn 아이콘 선택
-  let isSelecting = allCheckIcon.classList.contains('fa-circle'); // 현재 상태 확인
+  let allCheckIcon = document.querySelector('.allcheckBtn i');
+  let isSelecting = allCheckIcon.classList.contains('fa-circle');
   let icons = document.querySelectorAll(
     '.rec-items .fa-circle, .rec-items .fa-check-circle'
   );
@@ -119,11 +119,11 @@ function allcheckList() {
     if (isSelecting) {
       icon.classList.remove('fa-circle');
       icon.classList.add('fa-check-circle');
-      icon.parentElement.classList.add('selected'); // li 요소를 '선택된' 상태로 변경
+      icon.parentElement.classList.add('selected');
     } else {
       icon.classList.remove('fa-check-circle');
       icon.classList.add('fa-circle');
-      icon.parentElement.classList.remove('selected'); // li 요소의 '선택된' 상태 해제
+      icon.parentElement.classList.remove('selected');
     }
   });
 
