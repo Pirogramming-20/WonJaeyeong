@@ -16,6 +16,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  font-family: 'Pretendard-Regular';
 }
 .title {
   display: flex;
@@ -105,4 +106,34 @@ body {
 .trashBtn:hover {
   cursor: pointer;
   color: red;
+}
+
+.time-record {
+  width: 100%;
+}
+
+.rec-items {
+  list-style: none;
+  width: 100%;
+  font-size: 1em;
+  background-color: white;
+  padding: 5px;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.rec-items > li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.rec-items > li::after {
+  content: '';
+  background-image: blank;
+  display: block;
+  background-size: cover;
+  width: 16px;
+  height: 16px;
 }

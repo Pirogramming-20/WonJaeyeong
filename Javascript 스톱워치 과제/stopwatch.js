@@ -48,11 +48,44 @@ function stopTimer() {
   document.getElementById('startbutton').disabled = false;
   recordTime();
 }
+function toggleSelection(item) {
+  item.classList.toggle('selected');
+}
+
+function deleteSelectedRecords() {
+  let selectedItems = document.querySelectorAll('.rec-items .selected');
+  selectedItems.forEach(function (item) {
+    item.remove();
+  });
+}
+
+document
+  .querySelector('.trashBtn')
+  .addEventListener('click', deleteSelectedRecords);
 
 function recordTime() {
   let recordedTime = document.getElementById('stopwatch').innerHTML;
   let ul = document.querySelector('.rec-items');
   let li = document.createElement('li');
-  li.innerHTML = recordedTime;
+  li.className = 'rec-items';
+
+  let iconSpan = document.createElement('span');
+  iconSpan.className = 'fa-regular fa-circle allcheckBtn';
+  iconSpan.addEventListener('click', function () {
+    this.classList.toggle('fa-circle');
+    this.classList.toggle('fa-check-circle');
+    this.parentElement.classList.toggle('selected');
+  });
+
+  li.appendChild(iconSpan);
+  let timeText = document.createTextNode(' ' + recordedTime);
+  li.appendChild(timeText);
   ul.appendChild(li);
+}
+
+function clearList() {
+  let selectedItems = document.querySelectorAll('.rec-items .selected');
+  selectedItems.forEach(function (item) {
+    item.remove();
+  });
 }

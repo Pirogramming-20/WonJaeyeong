@@ -9,7 +9,6 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="stopwatch.css" />
-    <script src="stopwatch.js"></script>
   </head>
   <body>
     <div id="timer-container">
@@ -32,7 +31,9 @@
             <i class="fa-regular fa-circle"></i>
           </div>
           <div class="box-title">구간 기록</div>
-          <div class="trashBtn"><i class="fa-solid fa-trash"> </i></div>
+          <div class="trashBtn" id="clear" onclick="clearList()">
+            <i class="fa-solid fa-trash"> </i>
+          </div>
         </div>
       </div>
       <div class="time-record">
@@ -40,4 +41,5 @@
       </div>
     </div>
   </body>
+  <script src="stopwatch.js"></script>
 </html>
