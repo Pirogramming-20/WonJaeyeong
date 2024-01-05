@@ -48,8 +48,25 @@ function stopTimer() {
   document.getElementById('startbutton').disabled = false;
   recordTime();
 }
+
+function checkAllSelected() {
+  let allItems = document.querySelectorAll('.rec-items li');
+  let selectedItems = document.querySelectorAll('.rec-items .selected');
+  let allCheckIcon = document.querySelector('.allcheckBtn i');
+
+  // 모든 항목이 선택된 경우
+  if (allItems.length === selectedItems.length) {
+    allCheckIcon.classList.remove('fa-circle');
+    allCheckIcon.classList.add('fa-check-circle');
+  } else {
+    allCheckIcon.classList.remove('fa-check-circle');
+    allCheckIcon.classList.add('fa-circle');
+  }
+}
+
 function toggleSelection(item) {
   item.classList.toggle('selected');
+  checkAllSelected();
 }
 
 function deleteSelectedRecords() {
@@ -75,6 +92,7 @@ function recordTime() {
     this.classList.toggle('fa-circle');
     this.classList.toggle('fa-check-circle');
     this.parentElement.classList.toggle('selected');
+    checkAllSelected();
   });
 
   li.appendChild(iconSpan);
@@ -88,4 +106,28 @@ function clearList() {
   selectedItems.forEach(function (item) {
     item.remove();
   });
+}
+
+function allcheckList() {
+  let allCheckIcon = document.querySelector('.allcheckBtn i'); // allcheckBtn 아이콘 선택
+  let isSelecting = allCheckIcon.classList.contains('fa-circle'); // 현재 상태 확인
+  let icons = document.querySelectorAll(
+    '.rec-items .fa-circle, .rec-items .fa-check-circle'
+  );
+
+  icons.forEach(function (icon) {
+    if (isSelecting) {
+      icon.classList.remove('fa-circle');
+      icon.classList.add('fa-check-circle');
+      icon.parentElement.classList.add('selected'); // li 요소를 '선택된' 상태로 변경
+    } else {
+      icon.classList.remove('fa-check-circle');
+      icon.classList.add('fa-circle');
+      icon.parentElement.classList.remove('selected'); // li 요소의 '선택된' 상태 해제
+    }
+  });
+
+  // allcheckBtn 아이콘 클래스 토글
+  allCheckIcon.classList.toggle('fa-circle');
+  allCheckIcon.classList.toggle('fa-check-circle');
 }
