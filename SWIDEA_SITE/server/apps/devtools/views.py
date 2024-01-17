@@ -32,7 +32,6 @@ def detail(request,pk):
 def update(request,pk):
   devtool = Devtool.objects.get(id=pk)
   if request.method == 'GET':
-    #폼이 남아있는 상태로 보이도록함
     form = DevForm(instance=devtool)
     ctx = {
       'form' : form,
@@ -40,7 +39,6 @@ def update(request,pk):
     } 
     return render(request,'devtools/devtool_update.html',ctx)
   
-  #업데이트
   form = DevForm(request.POST,instance=devtool)
   if form.is_valid():
     form.save()

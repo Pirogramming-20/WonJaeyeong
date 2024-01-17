@@ -28,7 +28,7 @@
     {% else %} 
     {% if idea.star %}
     <div class="image-container">
-      <img src="{% static 'image/no_img.png' %}" alt="대체텍스트" />
+      <img src="{% static 'image/no_img.png' %}" alt="이미지 없음" />
       <a class="star-icon" href="{% url 'ideas:star_detail' idea.pk %}" style="margin-left: 860px; margin-top: 8px;">
         <i class="fa-regular fa-star outline"></i>
         <i class="fa-solid fa-star fill check"></i>
@@ -36,7 +36,7 @@
     </div>
     {% else %}
     <div class="image-container">
-      <img src="{% static 'image/no_img.png' %}" alt="대체텍스트" />
+      <img src="{% static 'image/no_img.png' %}" alt="이미지 없음" />
       <a class="star-icon" href="{% url 'ideas:star_detail' idea.pk %}" style="margin-left: 860px; margin-top: 8px;">
         <i class="fa-regular fa-star outline"></i>
         <i class="fa-solid fa-star fill"></i>
