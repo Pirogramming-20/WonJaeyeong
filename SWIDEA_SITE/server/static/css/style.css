@@ -1,0 +1,47 @@
+* {
+  text-align: center;
+}
+.head {
+  margin-bottom: 70px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+nav a {
+  text-decoration: none;
+  color: #000000;
+  margin: 0 15px;
+}
+
+nav a:hover {
+  color: #1ccad7;
+}
+
+.content-wrapper {
+  flex-direction: row;
+}
+
+.idea-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  gap: 10px;
+  text-align: center;
+}
+
+.idea-wrapper .item {
+  width: calc(50% - 10px);
+}
+
+.star-icon {
+  margin-left: 755px;
+  margin-top: 8px;
+}
+

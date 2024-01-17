@@ -1,0 +1,68 @@
+{% extends 'base.html' %} {% load static %} {%block content%}
+<div class="head">
+  <h1>Idea List</h1>
+  <div>나의 아이디어를 잊지 말고 기록해보세요!</div><br>
+</div>
+
+<!-- 정렬기준 -->
+<div class="sort">
+  <form style="text-align: right; margin: 0 auto; width: 70%;">
+    <select name="sort" onchange="form.submit()">
+      <option value="" selected="">--정렬기준--</option>
+      <option value="interest">찜하기순</option>
+      <option value="pk">등록순</option>
+      <option value="updated_date">최신순</option>
+      <option value="title">이름순</option>
+    </select>
+  </form>
+</div>
+
+<!-- 아이디어 리스트 반복문 -->
+<div class="content-wrapper">
+  {% for idea in ideas %}
+    {% if idea.star %}
+    <div class="idea-wrapper">
+      <div class="image-container">
+        <img src="{{ idea.image.url }}" alt="" >
+        <a class="star-icon" href="{% url 'ideas:star_list' idea.pk %}" style="margin-left: 755px; margin-top: 8px;">
+          <i class="fa-regular fa-star outline"></i>
+          <i class="fa-solid fa-star fill check"></i>
+        </a>
+      </div>
+      <div class="info">
+        <a href="{% url 'ideas:detail' idea.pk %}" class="title">
+          {{idea.title}}
+        </a>
+        <p class="devtool">예상 개발툴: {{idea.devtool}}</p>
+        <p class="interest"> 아이디어 관심도: 
+          <button value="{{idea.pk}}" class="click"  name="increase">+</button>
+          <span id="count-{{idea.pk}}">{{idea.interest}}</span>
+          <button value="{{idea.pk}}" class="click" name="decrease"  >-</button>
+        </p>
+      </div>
+    </div>
+    {% else %}
+    <div class="idea-wrapper">
+      <div class="image-container">
+        <img src="{{ idea.image.url }}" alt="" >
+        <a class="star-icon" href="{% url 'ideas:star_list' idea.pk %}" style="margin-left: 755px; margin-top: 8px;">
+          <i class="fa-regular fa-star outline"></i>
+          <i class="fa-solid fa-star fill"></i>
+        </a>
+      </div>
+      <div class="info">
+        <a href="{% url 'ideas:detail' idea.pk %}" class="title">
+          {{idea.title}}
+        </a>
+        <p class="devtool">예상 개발툴: {{idea.devtool}}</p>
+        <p class="interest"> 아이디어 관심도: 
+          <button value="{{idea.pk}}" class="click"  name="increase">+</button>
+          <span id="count-{{idea.pk}}">{{idea.interest}}</span>
+          <button value="{{idea.pk}}" class="click" name="decrease"  >-</button>
+        </p>
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>
+{%endblock%}
