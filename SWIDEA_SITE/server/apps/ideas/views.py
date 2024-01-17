@@ -33,14 +33,12 @@ def create(request):
 
 def detail(request,pk):
   idea = Idea.objects.get(id=pk)
-  
   ctx = {'idea':idea}
   return render(request,'ideas/idea_detail.html',ctx)
 
 def update(request,pk):
   idea = Idea.objects.get(id=pk)
   if request.method == 'GET':
-    #폼이 남아있는 상태로 보이도록함
     form = IdeaForm(instance=idea)
     ctx = {
       'form' : form,

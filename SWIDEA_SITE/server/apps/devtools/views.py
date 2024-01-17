@@ -39,6 +39,7 @@ def update(request,pk):
     } 
     return render(request,'devtools/devtool_update.html',ctx)
   
+  #업데이트
   form = DevForm(request.POST,instance=devtool)
   if form.is_valid():
     form.save()

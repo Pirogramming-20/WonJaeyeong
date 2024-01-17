@@ -15,10 +15,11 @@
     </div>
   </div>
   {% for rel_idea in related_ideas %}
+  <p style="font-weight: bold;">> 만들 수 있는 SW 목록</p>
   <a href="{% url 'ideas:detail' rel_idea.pk %}" class="btn btn-success">
     {{rel_idea.title}}
   </a>
-  <br />
+  <br><br><br>
   {% endfor %}
 </div>
 <form action="{% url 'devtools:delete' devtool.pk %}" method="POST">
