@@ -8,18 +8,19 @@ from django.http import JsonResponse
 # Create your views here.
 def main(request):
     posts = Post.objects.all()
-    ctx = {
+    context = {
         'posts' : posts,
     }
-    return render(request, 'posts/post_main.html', ctx)
+    return render(request, 'posts/post_main.html', context)
 
+@csrf_exempt
 def create(request):
     if request.method == 'GET':
         form = PostForm()
-        ctx = {
+        context = {
             'form' : form,
         }
-        return render(request, 'posts/post_create.html', ctx)
+        return render(request, 'posts/post_create.html', context)
     form = PostForm(request.POST, request.FILES)
     if form.is_valid():
         form.save()
